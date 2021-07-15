@@ -1,0 +1,17 @@
+{
+  "name": "skywire/m2-logging",
+  "description": "Logging processor to add useful extra information to all logs",
+  "require": {
+    "php": "^7|^8",
+    "magento/magento-composer-installer": "*"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "src/registration.php"
+    ],
+    "psr-4": {
+      "Skywire\\Logger\\": "src/"
+    }
+  }
+}
