@@ -5,6 +5,7 @@ Adds extra information to all log entries
 Currently adds
 
 * Request remote IP
+* Request method and URL, e.g `GET /customer/account/login`
 
 ## Installation
 
