@@ -4,6 +4,7 @@
         <arguments>
             <argument name="processors" xsi:type="array">
                 <item name="remote_ip_processor" xsi:type="object">Skywire\Logger\Processor\RemoteIpProcessor</item>
+                <item name="url_processor" xsi:type="object">Skywire\Logger\Processor\UrlProcessor</item>
             </argument>
         </arguments>
     </type>
