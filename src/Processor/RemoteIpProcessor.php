@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Skywire\Logger\Processor;
 
+use Monolog\LogRecord;
 use Monolog\Processor\ProcessorInterface;
 use Magento\Framework\HTTP\PhpEnvironment\RemoteAddress;
 
@@ -26,10 +27,10 @@ class RemoteIpProcessor implements ProcessorInterface
         $this->remoteAddress = $remoteAddress;
     }
 
-    public function __invoke(array $records)
+    public function __invoke(LogRecord $record)
     {
-        $records['extra']['remote_ip'] = $this->remoteAddress->getRemoteAddress();
+        $record->extra['remote_ip'] = $this->remoteAddress->getRemoteAddress();
 
-        return $records;
+        return $record;
     }
 }

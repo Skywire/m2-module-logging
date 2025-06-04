@@ -7,6 +7,14 @@ Currently adds
 * Request remote IP
 * Request method and URL, e.g `GET /customer/account/login`
 
+## Versions
+
+### 1.x
+<= Magento 2.4.7
+
+2.x
+>= Magento 2.4.8
+
 ## Installation
 
 `composer require skywire/m2-logging`

@@ -11,16 +11,17 @@ declare(strict_types=1);
 
 namespace Skywire\Logger\Processor;
 
+use Monolog\LogRecord;
 use Monolog\Processor\ProcessorInterface;
 
 class UrlProcessor implements ProcessorInterface
 {
-    public function __invoke(array $records)
+    public function __invoke(LogRecord $record)
     {
         if (isset($_SERVER['REQUEST_METHOD']) && isset($_SERVER['REQUEST_URI'])) {
-            $records['extra']['url'] = $_SERVER['REQUEST_METHOD'] . ' ' . $_SERVER['REQUEST_URI'];
+            $record->extra['url'] = $_SERVER['REQUEST_METHOD'] . ' ' . $_SERVER['REQUEST_URI'];
         }
 
-        return $records;
+        return $record;
     }
 }
