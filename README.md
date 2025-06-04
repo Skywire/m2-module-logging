@@ -12,7 +12,7 @@ Currently adds
 ### 1.x
 <= Magento 2.4.7
 
-2.x
+### 2.x
 \>= Magento 2.4.8
 
 ## Installation
